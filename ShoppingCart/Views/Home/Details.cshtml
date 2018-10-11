@@ -1,0 +1,70 @@
+﻿@model ShoppingCart.Models.Product.Product
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+<h2>Product Information</h2>
+
+<div class="">
+    <hr />
+    <dl class="dl-horizontalC">
+        <dt>
+
+        </dt>
+
+        <dd>
+            <img src="@this.Model.DefaultImageURL" width="400" />
+        </dd>
+        <dl></dl>
+        <dt>
+            Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            Price
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+
+    <dl class="dl-horizontalC">
+        @foreach (var comment in ViewBag.Comment)
+        {
+            <dt>@comment.UserId：</dt>
+            <dd>@comment.Content  ( @comment.CreateDate )  </dd>
+        }
+    </dl>
+
+    @using (Html.BeginForm("AddReview", "Home", FormMethod.Post, new { }))
+    {
+        @Html.HiddenFor(m => m.Id , new { @name = "pId" })
+        <div class="container">
+            <input type="text" name="pContent" />
+            <input type="submit" value="Write review" class="btn btn-primary" />
+        </div>
+    }
+    <div class="container">
+        <p></p>
+        <p>
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+        </p>
+    </div>
+</div>

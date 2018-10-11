@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ShoppingCart.Models.Cart.OrderDetail>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@String.Format("Order No.{0} Product List", this.Model.FirstOrDefault().OrderId)</h2>
+
+<hr />
+<table class="table table-hover table-striped">
+    <tr>
+        <th>Product Name</th><th>Price</th><th>Quantity</th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+    </tr>
+}
+
+</table>
+
+<hr />
+@Html.ActionLink("Back to Order List", "MyOrder") 
+

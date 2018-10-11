@@ -1,0 +1,42 @@
+﻿@using ShoppingCart.Models.Cart
+
+@{
+    var currentCart = Operation.GetCurrentCart();  
+}
+
+
+<a id="CartDropDown" class="dropdown-toggle" data-toggle="dropdown" style="width:300px">
+    @String.Format( "Total CDN$ {0}  ({1} items)", currentCart.TotalAmount.ToString("n2"), currentCart.Count )
+    <span class="caret"></span>
+</a>
+
+<ul class="dropdown-menu list-group list-group-flush Cart" role="menu" aria-labelledby="CartDropDown">
+    @if (currentCart.Count > 0)
+    {
+        foreach (CartItem cartitem in currentCart)
+        {
+            <li class="col-xs-12 list-group-item" style="margin-top:10px">
+                <span class="col-xs-11">@cartitem.Name CDN$@cartitem.Price.ToString("n2")  x @cartitem.Quantity </span>
+                <span class="btn badge badge-danger col-xs-1" onclick="RemoveFromCart('@cartitem.Id')">
+                    X
+                </span>
+            </li>
+        }
+        <li class="divider"></li>
+        <li>
+            <div id="CartButtons" class="col-xs-12"  style="margin-top:10px">
+                <a class="btn btn-success text-center col-xs-7" href="@Url.Action("Index","Order",new { })">
+                    CheckOut
+                </a>
+                <a class="btn btn-danger text-center col-xs-offset-1 col-xs-4" onclick="ClearCart()">Clear</a>
+            </div>        
+        </li>
+    }
+    else
+    {
+        <li><a class="btn btn-default text-center" href="#">There no item in cart</a></li>
+    }
+
+</ul>
+
+

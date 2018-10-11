@@ -1,0 +1,14 @@
+﻿.dl-horizontalC dt {
+    float: left;
+    width: 190px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dl-horizontalC dd {
+    width: 500px;
+    margin-left: 200px;
+}

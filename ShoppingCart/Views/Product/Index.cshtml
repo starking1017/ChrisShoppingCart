@@ -1,0 +1,45 @@
+﻿@model List<ShoppingCart.Models.Product.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Product List</h2>
+
+@if (ViewBag.ResultMessage != null) { 
+    @Html.Label("info", (string)ViewBag.ResultMessage, new { @class = "text-info" })
+}
+
+<table class="table table-hover table-striped">
+    <thead><tr><td colspan="2">Operator</td><td>Picture</td><td>Id</td><td>Name</td><td>Detail</td><td>Price</td><td>Stock</td></tr></thead>
+    <tbody>
+        @foreach (var pd in this.Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { pId = pd.Id }, new { @class = "btn btn-primary" })
+                </td>
+                <td>
+                    @using (@Html.BeginForm("Delete", "Product", FormMethod.Post, 
+                         new { @class = "Delete" , @onclick = "return confirm('Are you sure you want to delete this item?');"}))
+                    {
+                        @Html.Hidden("pId", pd.Id)
+                        <input type="submit" value="Delete" class="btn btn-danger" />
+                    }
+                </td>
+                <td><img src="@pd.DefaultImageURL" width="50" height="50" /></td>
+                <td>@pd.Id</td>
+                <td>@pd.Name</td>
+                <td>@pd.Description</td>
+                <td>@pd.Price</td>
+                <td>@pd.Quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div>
+    @Html.ActionLink("Add Product", "Create", new { }, new { @class = "btn btn-default" })
+</div>

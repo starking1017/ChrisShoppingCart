@@ -1,0 +1,17 @@
+C:\Users\stark\Source\Repos\BroadWalkSampleApp\Utilities\bin\Debug\netcoreapp2.1\Utilities.deps.json
+C:\Users\stark\Source\Repos\BroadWalkSampleApp\Utilities\bin\Debug\netcoreapp2.1\Utilities.dll
+C:\Users\stark\Source\Repos\BroadWalkSampleApp\Utilities\bin\Debug\netcoreapp2.1\Utilities.pdb
+C:\Users\stark\Source\Repos\BroadWalkSampleApp\Utilities\obj\Debug\netcoreapp2.1\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\stark\Source\Repos\BroadWalkSampleApp\Utilities\obj\Debug\netcoreapp2.1\Utilities.AssemblyInfoInputs.cache
+C:\Users\stark\Source\Repos\BroadWalkSampleApp\Utilities\obj\Debug\netcoreapp2.1\Utilities.AssemblyInfo.cs
+C:\Users\stark\Source\Repos\BroadWalkSampleApp\Utilities\obj\Debug\netcoreapp2.1\Utilities.dll
+C:\Users\stark\Source\Repos\BroadWalkSampleApp\Utilities\obj\Debug\netcoreapp2.1\Utilities.pdb
+C:\Users\stark\Source\repos\ChrisShoppingCart\Utilities\bin\Debug\netcoreapp2.1\Utilities.deps.json
+C:\Users\stark\Source\repos\ChrisShoppingCart\Utilities\bin\Debug\netcoreapp2.1\Utilities.dll
+C:\Users\stark\Source\repos\ChrisShoppingCart\Utilities\bin\Debug\netcoreapp2.1\Utilities.pdb
+C:\Users\stark\Source\repos\ChrisShoppingCart\Utilities\obj\Debug\netcoreapp2.1\Utilities.csprojAssemblyReference.cache
+C:\Users\stark\Source\repos\ChrisShoppingCart\Utilities\obj\Debug\netcoreapp2.1\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\stark\Source\repos\ChrisShoppingCart\Utilities\obj\Debug\netcoreapp2.1\Utilities.AssemblyInfoInputs.cache
+C:\Users\stark\Source\repos\ChrisShoppingCart\Utilities\obj\Debug\netcoreapp2.1\Utilities.AssemblyInfo.cs
+C:\Users\stark\Source\repos\ChrisShoppingCart\Utilities\obj\Debug\netcoreapp2.1\Utilities.dll
+C:\Users\stark\Source\repos\ChrisShoppingCart\Utilities\obj\Debug\netcoreapp2.1\Utilities.pdb
